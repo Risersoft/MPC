@@ -1,0 +1,33 @@
+﻿
+Enteries to be Done from Backend for Getting started with New Tenant.
+
+1- DocNumSys Entries
+2- Status Entries
+
+Enteries to be Done from UI.
+
+1- Company
+2- PayPeriod
+3- Deps
+4- Campus
+5- DepsMat
+6- Shift
+7- Persons
+8- Employees
+9- PlnProc
+10- PlnRouting
+11- PlnOP
+12- PlnProcShop
+13- PlnStdSeq
+14- PlnStdSeqProc
+15- PlnProcIncType
+16- ProdBasic
+17- PIDUnit
+18- ProdLots
+19- PlnPIDURoute
+20- ProdLotRoute
+21- ProdProgress
+22- ProdLotReport
+23- ProdContriEmp
+24- ProdContriEmpGrp
+25- ProdContriEmpInd

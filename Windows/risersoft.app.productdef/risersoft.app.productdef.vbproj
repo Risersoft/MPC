@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27ECE920-8806-4418-848D-B17D2EE2B169}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>risersoft.app.productdef</RootNamespace>
+    <AssemblyName>risersoft.app.productdef</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>risersoft.app.productdef.xml</DocumentationFile>
+    <NoWarn>42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>risersoft.app.productdef.xml</DocumentationFile>
+    <NoWarn>42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics.Win,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinTree,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinTabControl,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinListView,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinGrid,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinEditors,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.UltraWinCalcManager,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Win.Misc,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Shared,Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="risersoft.app.config" />
+    <Import Include="risersoft.app.mxent" />
+    <Import Include="risersoft.app.mxform" />
+    <Import Include="risersoft.app.shared" />
+    <Import Include="risersoft.shared" />
+    <Import Include="risersoft.shared.portable.Models.Nav" />
+    <Import Include="risersoft.shared.win" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOM\frmMat.designer.vb">
+      <DependentUpon>frmMat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatListCost.designer.vb">
+      <DependentUpon>frmMatListCost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatListCost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatSelect.designer.vb">
+      <DependentUpon>frmMatSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMat_Cost.designer.vb">
+      <DependentUpon>frmMat_Cost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMat_Cost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatList1.designer.vb">
+      <DependentUpon>frmMatList1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatList1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatList1Copy.designer.vb">
+      <DependentUpon>frmMatList1Copy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatList1Copy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatList1Tab.designer.vb">
+      <DependentUpon>frmMatList1Tab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatList1Tab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatListSp.designer.vb">
+      <DependentUpon>frmMatListSp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatListSp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMat_SPHead.designer.vb">
+      <DependentUpon>frmMat_SPHead.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMat_SPHead.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMat_SpItem.designer.vb">
+      <DependentUpon>frmMat_SpItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMat_SpItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\myFuncs.vb" />
+    <Compile Include="FCS-STD\frmIncType.Designer.vb">
+      <DependentUpon>frmIncType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmIncType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmMacGroup.Designer.vb">
+      <DependentUpon>frmMacGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmMacGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmOpReq.Designer.vb">
+      <DependentUpon>frmOpReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmOpReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmOp.Designer.vb">
+      <DependentUpon>frmOp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmOp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmPlnProc.Designer.vb">
+      <DependentUpon>frmPlnProc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmPlnProc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmProdBasic.Designer.vb">
+      <DependentUpon>frmProdBasic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmProdBasic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmRes.Designer.vb">
+      <DependentUpon>frmRes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmRes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmResCrew.Designer.vb">
+      <DependentUpon>frmResCrew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmResCrew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmResGroup.Designer.vb">
+      <DependentUpon>frmResGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmResGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmRouting.Designer.vb">
+      <DependentUpon>frmRouting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmRouting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmPlnProcTypeIncen.Designer.vb">
+      <DependentUpon>frmPlnProcTypeIncen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmPlnProcTypeIncen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmSeqSeqProc.Designer.vb">
+      <DependentUpon>frmSeqSeqProc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmSeqSeqProc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmSeqProc.Designer.vb">
+      <DependentUpon>frmSeqProc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmSeqProc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCS-STD\frmStdSeq.Designer.vb">
+      <DependentUpon>frmStdSeq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCS-STD\frmStdSeq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmMatHead.designer.vb">
+      <DependentUpon>frmMatHead.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmMatHead.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOM\frmHeadType.designer.vb">
+      <DependentUpon>frmHeadType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BOM\frmHeadType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatBOM.Designer.vb">
+      <DependentUpon>frmPIDUMatBOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatBOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDUMat.designer.vb">
+      <DependentUpon>frmPIDUMat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDUMat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatBOMAlt.designer.vb">
+      <DependentUpon>frmPIDUMatBOMAlt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatBOMAlt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDURoute.designer.vb">
+      <DependentUpon>frmPIDURoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDURoute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatListETO.designer.vb">
+      <DependentUpon>frmPIDUMatListETO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDUMatListETO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDURouteList.designer.vb">
+      <DependentUpon>frmPIDURouteList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDURouteList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WO\frmPIDUnitDef.designer.vb">
+      <DependentUpon>frmPIDUnitDef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WO\frmPIDUnitDef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BOM\frmMat.resx">
+      <DependentUpon>frmMat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatListCost.resx">
+      <DependentUpon>frmMatListCost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatSelect.resx">
+      <DependentUpon>frmMatSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMat_Cost.resx">
+      <DependentUpon>frmMat_Cost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatList1.resx">
+      <DependentUpon>frmMatList1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatList1Copy.resx">
+      <DependentUpon>frmMatList1Copy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatList1Tab.resx">
+      <DependentUpon>frmMatList1Tab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatListSp.resx">
+      <DependentUpon>frmMatListSp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMat_SPHead.resx">
+      <DependentUpon>frmMat_SPHead.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMat_SpItem.resx">
+      <DependentUpon>frmMat_SpItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmIncType.resx">
+      <DependentUpon>frmIncType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmMacGroup.resx">
+      <DependentUpon>frmMacGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmOpReq.resx">
+      <DependentUpon>frmOpReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmOp.resx">
+      <DependentUpon>frmOp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmPlnProc.resx">
+      <DependentUpon>frmPlnProc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmProdBasic.resx">
+      <DependentUpon>frmProdBasic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmRes.resx">
+      <DependentUpon>frmRes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmResCrew.resx">
+      <DependentUpon>frmResCrew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmResGroup.resx">
+      <DependentUpon>frmResGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmRouting.resx">
+      <DependentUpon>frmRouting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmPlnProcTypeIncen.resx">
+      <DependentUpon>frmPlnProcTypeIncen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmSeqSeqProc.resx">
+      <DependentUpon>frmSeqSeqProc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmSeqProc.resx">
+      <DependentUpon>frmSeqProc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCS-STD\frmStdSeq.resx">
+      <DependentUpon>frmStdSeq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmMatHead.resx">
+      <DependentUpon>frmMatHead.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOM\frmHeadType.resx">
+      <DependentUpon>frmHeadType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDUMatBOM.resx">
+      <DependentUpon>frmPIDUMatBOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDUMat.resx">
+      <DependentUpon>frmPIDUMat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDUMatBOMAlt.resx">
+      <DependentUpon>frmPIDUMatBOMAlt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDURoute.resx">
+      <DependentUpon>frmPIDURoute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDUMatListETO.resx">
+      <DependentUpon>frmPIDUMatListETO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDURouteList.resx">
+      <DependentUpon>frmPIDURouteList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WO\frmPIDUnitDef.resx">
+      <DependentUpon>frmPIDUnitDef.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Win\risersoft.app2.shared\risersoft.app2.shared.vbproj">
+      <Project>{b47e653f-a85b-447f-8993-705d82410a95}</Project>
+      <Name>risersoft.app2.shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Win\risersoft.shared.win\risersoft.shared.win.vbproj">
+      <Project>{6e272ec6-dc22-46f8-bb94-40780818737b}</Project>
+      <Name>risersoft.shared.win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Shared\risersoft.shared\risersoft.shared.vbproj">
+      <Project>{678F7367-71BB-425C-A388-B45D25822CA3}</Project>
+      <Name>risersoft.shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Shared\risersoft.shared.dotnetfx\risersoft.shared.dotnetfx.vbproj">
+      <Project>{3dc06d9d-b9b9-414c-b83c-2b9eeaaf5ea6}</Project>
+      <Name>risersoft.shared.dotnetfx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Shared\risersoft.app.mxent\risersoft.app.mxent.vbproj">
+      <Project>{2693738b-de66-476d-afda-fd39e4579f27}</Project>
+      <Name>risersoft.app.mxent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Win\risersoft.app.shared\risersoft.app.shared.vbproj">
+      <Project>{45cc2480-572f-409a-8c7a-30a31d6fe513}</Project>
+      <Name>risersoft.app.shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Windows\risersoft.app.config\risersoft.app.config.vbproj">
+      <Project>{6e72e896-afce-497c-95ed-676f43b862f1}</Project>
+      <Name>risersoft.app.config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Forms\risersoft.app.mxform\risersoft.app.mxform.vbproj">
+      <Project>{0e5882d2-22b1-4716-99df-680a77ae3e19}</Project>
+      <Name>risersoft.app.mxform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Shared\risersoft.shared.portable\risersoft.shared.portable.csproj">
+      <Project>{1742c540-4c7d-4397-8a46-f6a6ade33c5e}</Project>
+      <Name>risersoft.shared.portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem call "$(ProjectDir)..\..\..\vsprojs\obfus.bat" "$(ConfigurationName)" "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
